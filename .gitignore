@@ -2,3 +2,5 @@
 node_modules/*
 build/*
 .idea/*
+database.json
+package-lock.json
