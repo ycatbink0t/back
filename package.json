@@ -6,9 +6,9 @@
   "scripts": {
     "test": "jest",
     "start": "tsc && node build/index --harmony",
-    "prestart": "db-migrate up:all -dev",
     "m:r:test": "db-migrate down:all -dev && db-migrate up:all -dev",
-    "pretest": "npm run m:r:test"
+    "pretest": "npm run m:r:test",
+    "db-migrate": "db-migrate"
   },
   "dependencies": {
     "@types/dotenv": "^8.2.0",
