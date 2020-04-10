@@ -10,6 +10,7 @@ passport.use('local', new LocalStrategy(
         const user = await User.get({username});
         if (user as IUser[] && user?.length) {
             const isValid = await bcrypt.compare(password, user[0].password);
+            delete user[0].password;
             if (isValid) {
                 done(null, user[0]);
                 return;
